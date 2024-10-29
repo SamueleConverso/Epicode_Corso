@@ -1,2 +1,2 @@
 # Repository di Samuele Converso
-per il corso Full-Stack Web Developer di Epicode
+Per il corso Full-Stack Web Developer di Epicode.
