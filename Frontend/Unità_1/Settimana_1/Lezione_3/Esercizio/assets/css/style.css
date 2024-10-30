@@ -48,3 +48,7 @@
 a:link, a:visited {
     color: #137878;
  }
+
+ li {
+    margin-bottom: 1rem;
+ }
