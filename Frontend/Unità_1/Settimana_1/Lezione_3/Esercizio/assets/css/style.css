@@ -1,0 +1,47 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#header {
+    width: 30vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#header p {
+    color: #004444;
+    background-color: blanchedalmond;
+}
+
+#main {
+    width: 30vw;
+    margin: 0 auto;
+    /*text-align: center;*/
+}
+
+#section1 h1 {
+    text-align: center;
+}
+
+#section1 p.desc {
+    color: #A5A5A5;
+    text-align: center;
+}
+
+#section1 p.feat {
+    color: #D08866;
+    align-self: start;
+}
+
+#section1 img {
+    display: block;
+    margin: 0 auto;
+}
+
+#section2 hr {
+    border-color: #CDF5F4;
+}
+
+a:link, a:visited {
+    color: #137878;
+ }
