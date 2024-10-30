@@ -3,7 +3,7 @@
 }
 
 #header {
-    width: 28vw;
+    width: 50vw;
     margin: 0 auto;
     text-align: center;
 }
@@ -14,7 +14,7 @@
 }
 
 #main {
-    width: 28vw;
+    width: 50vw;
     margin: 0 auto;
 }
 
@@ -30,6 +30,8 @@
 #section1 p.feat {
     color: #D08866;
     align-self: start;
+    border-left: solid 2px orange;
+    padding-left: 5px;
 }
 
 #section1 img {
