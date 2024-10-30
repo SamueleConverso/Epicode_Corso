@@ -10,8 +10,8 @@
 
 #header p {
     color: #004444;
-    background-color: blanchedalmond;
-    border-top: solid 2px orange;
+    background-color: #FDFBF1;
+    border-top: solid 2px #FEE197;
     padding: 20px;
 }
 
@@ -31,8 +31,8 @@
 
 #section1 p.feat {
     color: #D08866;
-    border-left: solid 2px orange;
-    padding-left: 5px;
+    border-left: solid 2px #FEE197;
+    padding-left: 15px;
 }
 
 #section1 img {
