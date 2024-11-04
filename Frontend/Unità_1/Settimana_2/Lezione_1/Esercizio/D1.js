@@ -78,7 +78,7 @@ const name1 = "john";
 const name2 = "John";
 
 function verificaDisuguaglianza() {
-  if (!(name1 === name2)) {
+  if (name1 !== name2) {
     console.log("I nomi sono diversi!");
   } else if (name1 === name2) {
     console.log("I nomi sono uguali!");
