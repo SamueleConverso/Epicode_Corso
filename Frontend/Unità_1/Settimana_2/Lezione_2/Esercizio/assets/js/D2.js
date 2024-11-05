@@ -90,12 +90,12 @@ if (dealCart > 50) {
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
 */
-let dato1 = 10; // 10  10  15   15  12  12
-let dato2 = 12; // 12  15  10   12  15  10
-let dato3 = 15; // 15  12  12   10  10  15
+let dato1 = 5; // 10  10  15   15  12  12
+let dato2 = 5; // 12  15  10   12  15  10
+let dato3 = 10; // 15  12  12   10  10  15
 
-if (dato3 > dato2 && dato2 > dato1) {
-  // 10 12 15
+if (dato3 >= dato2 && dato2 > dato1) {
+  // 10 12 15 oppure 10 15 15
   console.log(
     "Caso 1 = " +
       "dato3: " +
@@ -118,8 +118,8 @@ if (dato3 > dato2 && dato2 > dato1) {
       dato1 +
       "."
   ); // Output --> Caso 2 = dato2: 15, dato3: 12, dato1: 10.
-} else if (dato1 > dato3 && dato3 > dato2) {
-  // 15  10  12
+} else if (dato1 >= dato3 && dato3 > dato2) {
+  // 15  10  12 oppure 15 10 15
   console.log(
     "Caso 3 = " +
       "dato1: " +
@@ -130,8 +130,8 @@ if (dato3 > dato2 && dato2 > dato1) {
       dato2 +
       "."
   ); // Output --> Caso 3 = dato1: 15, dato3: 12, dato2: 10.
-} else if (dato1 > dato2 && dato2 > dato3) {
-  // 15  12  10
+} else if (dato1 >= dato2 && dato2 > dato3) {
+  // 15  12  10 oppure 15 15 10
   console.log(
     "Caso 4 = " +
       "dato1: " +
@@ -143,7 +143,7 @@ if (dato3 > dato2 && dato2 > dato1) {
       "."
   ); // Output --> Caso 4 = dato1: 15, dato2: 12, dato3: 10.
 } else if (dato2 > dato1 && dato2 > dato3) {
-  // 12  15  10
+  // 12  15  10 oppure 5 10 5
   console.log(
     "Caso 5 = " +
       "dato2: " +
@@ -166,8 +166,30 @@ if (dato3 > dato2 && dato2 > dato1) {
       dato2 +
       "."
   ); // Output --> Caso 6 = dato3: 15, dato1: 12, dato2: 10.
-} else {
-  console.log("Caso 7."); // --> Caso 7.
+} else if (dato1 > dato2 && dato2 === dato3) {
+  // 10  5  5
+  console.log(
+    "Caso 7 = " +
+      "dato1: " +
+      dato1 +
+      ", dato2: " +
+      dato2 +
+      ", dato3: " +
+      dato3 +
+      "."
+  ); // Output --> Caso 7 = dato1: 10, dato2: 5, dato3: 5.
+} else if (dato3 > dato2 && dato2 === dato1) {
+  // 5 5 10
+  console.log(
+    "Caso 8 = " +
+      "dato3: " +
+      dato3 +
+      ", dato2: " +
+      dato2 +
+      ", dato1: " +
+      dato1 +
+      "."
+  ); // Output --> Caso 8 = dato3: 10, dato2: 5, dato1: 5
 }
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -240,7 +262,7 @@ console.log(me.lastName);
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
-me.skills[2] = null;
+delete me.skills[2];
 console.log(me.skills[2]);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
