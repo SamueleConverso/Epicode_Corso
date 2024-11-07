@@ -212,6 +212,7 @@ for (let i = 0; i < charactersNames.length; i++) {
   for (let f = 0; f < femaleCharacters.length; f++) {
     if (charactersNames[i] === femaleCharacters[f].name) {
       charactersNames.splice(i, 1);
+      i--;
     }
   }
 }
