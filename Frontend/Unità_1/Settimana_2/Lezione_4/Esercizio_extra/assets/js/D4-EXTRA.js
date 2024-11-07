@@ -94,19 +94,23 @@ function maxShoppingCart() {
   let prices = [];
   let prevPrice = 0;
   let maxPrice;
+  let maxName;
   for (let a = 0; a < shoppingCart.length; a++) {
     for (let b = 0; b < shoppingCart.length; b++) {
       //   prices.push(shoppingCart[i].price);
       if (shoppingCart[b].price > shoppingCart[a].price) {
         maxPrice = shoppingCart[b].price;
+        maxName = shoppingCart[b].name;
       }
     }
   }
   // maxPrice = Math.max(...prices);
-  return maxPrice;
+  return console.log(
+    "Prezzo più alto: " + maxPrice + " per l'oggetto: " + maxName
+  );
 }
 
-console.log("Prezzo più alto: " + maxShoppingCart());
+maxShoppingCart();
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
