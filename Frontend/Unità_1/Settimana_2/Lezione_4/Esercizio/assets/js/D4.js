@@ -68,6 +68,15 @@ function epify(str) {
 }
 
 console.log("Epify: " + epify("ciao a tutti"));
+
+/*function epify(str) {
+  if (str.indexOf('EPICODE') === 0) {
+    return str;
+  } else {
+    return 'EPICODE' + str;
+  }
+}*/
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 6
