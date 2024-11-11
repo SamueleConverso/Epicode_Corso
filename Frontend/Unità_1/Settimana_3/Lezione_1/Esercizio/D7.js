@@ -275,7 +275,7 @@ console.log(findMovie("tt0087365"));
 */
 console.log("--- ESERCIZIO 15 ---");
 function findMovieIndex(year) {
-  let newYear = 0;
+  let newYear = year;
   if (typeof year === "string") {
     newYear = parseInt(year);
   }
@@ -284,4 +284,4 @@ function findMovieIndex(year) {
   );
   return movieIndex;
 }
-console.log(findMovieIndex("2012"));
+console.log(findMovieIndex(2012));
