@@ -250,7 +250,13 @@ console.log(millYear());
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 console.log("--- ESERCIZIO 13 ---");
-function sumYears() {
+// SOLUZIONE DEL PROF
+const sumYears = () => {
+  return movies.reduce((tot, val) => tot + parseInt(val.Year), 0);
+};
+console.log(sumYears());
+
+/*function sumYears() {
   let years = [];
   let sum = 0;
   for (let i = 0; i < movies.length; i++) {
@@ -259,7 +265,7 @@ function sumYears() {
   sum = years.reduce((tot, val) => tot + val, 0);
   return sum;
 }
-console.log(sumYears());
+console.log(sumYears());*/
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
