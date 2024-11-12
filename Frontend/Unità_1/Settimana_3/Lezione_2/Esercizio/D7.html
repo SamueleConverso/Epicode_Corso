@@ -362,14 +362,49 @@
       /* EXTRA ESERCIZIO 14
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
       */
-
-      const changeColorWithRandom = function () {};
-
+      const title2 = document.querySelector("h2");
+      const changeColorWithRandom = function () {
+        let setRgb = [0, 0, 0];
+        for (let i = 0; i < setRgb.length; i++) {
+          setRgb[i] = Math.floor(Math.random() * 256);
+        }
+        title2.style.color = `rgb(${setRgb[0]}, ${setRgb[1]}, ${setRgb[2]})`;
+      };
+      title2.addEventListener("click", changeColorWithRandom);
       /* EXTRA ESERCIZIO 15
         Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
       */
-
-      const deleteVowels = function () {};
+      // h1, h2, h3, li, p, a, th, td
+      const vowels = [
+        "a",
+        "à",
+        "e",
+        "è",
+        "i",
+        "o",
+        "u",
+        "A",
+        "E",
+        "I",
+        "O",
+        "U",
+      ];
+      const deleteVowels = function () {
+        let selectText = document.querySelectorAll(
+          "h1, h2, h3, li, p, a, th, td"
+        );
+        let arrText = [];
+        for (let i = 0; i < selectText.length; i++) {
+          arrText[i] = selectText[i].innerText;
+          for (let c = 0; c < arrText.length; c++) {
+            for (let r = 0; r < vowels.length; r++) {
+              arrText[c] = arrText[c].replaceAll(vowels[r], " ");
+            }
+          }
+          selectText[i].innerText = arrText[i];
+        }
+      };
+      deleteVowels();
     </script>
   </body>
 </html>
