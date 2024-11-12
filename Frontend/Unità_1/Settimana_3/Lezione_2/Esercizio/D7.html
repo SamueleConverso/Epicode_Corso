@@ -182,16 +182,18 @@
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
       const tableArea = document.getElementById("tableArea");
+
+      const newTable = document.createElement("table");
+      tableArea.appendChild(newTable);
+
       const generateTable = function () {
-        const newTable = document.createElement("table");
-        tableArea.appendChild(newTable);
-        newTable.setAttribute("border", "collapse");
         const row1 = document.createElement("tr");
         const row2 = document.createElement("tr");
         const row3 = document.createElement("tr");
         const row4 = document.createElement("tr");
         const row5 = document.createElement("tr");
         const row6 = document.createElement("tr");
+        newTable.setAttribute("border", "collapse");
         newTable.appendChild(row1);
         newTable.appendChild(row2);
         newTable.appendChild(row3);
@@ -231,21 +233,28 @@
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {};
+      const addRow = function () {
+        const row7 = document.createElement("tr");
+        newTable.appendChild(row7);
+        const elem6 = document.createElement("td");
+        row7.appendChild(elem6);
+        elem6.innerText = "Elemento 6";
+      };
+      addRow();
 
-      /* ESERCIZIO 14
+      /* ESERCIZIO 13
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
       const hideAllImages = function () {};
 
-      /* EXTRA ESERCIZIO 15
+      /* EXTRA ESERCIZIO 14
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
       const changeColorWithRandom = function () {};
 
-      /* EXTRA ESERCIZIO 16
+      /* EXTRA ESERCIZIO 15
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
     */
 
