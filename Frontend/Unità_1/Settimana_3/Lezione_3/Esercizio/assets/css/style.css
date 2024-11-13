@@ -36,3 +36,7 @@ p {
   color: orange;
   margin-left: 30px;
 }
+
+.barraTesto {
+  text-decoration: line-through;
+}
