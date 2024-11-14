@@ -16,23 +16,10 @@ let ranNum = 0;
 
 const allCells = document.querySelectorAll("#mainDiv div");
 
-btnExtract.addEventListener("click", function () {
-  genRanNum();
-  alert("Il numero estratto è " + ranNum);
-
-  if (!check()) {
-    extractedNum.push(ranNum);
-    for (let i = 0; i < allCells.length; i++) {
-      if (parseInt(allCells[i].innerText) === ranNum) {
-        allCells[i].classList.add("extracted");
-      }
-    }
-  }
-  console.log(extractedNum);
-});
+btnExtract.addEventListener("click", pressBtn);
 
 function genRanNum() {
-  ranNum = Math.floor(Math.random() * 90);
+  ranNum = Math.floor(Math.random() * 90 + 1);
   return ranNum;
 }
 
@@ -41,5 +28,20 @@ function check() {
     return true;
   } else {
     return false;
+  }
+}
+
+function pressBtn() {
+  genRanNum();
+
+  if (!check()) {
+    extractedNum.push(ranNum);
+    for (let i = 0; i < allCells.length; i++) {
+      if (parseInt(allCells[i].innerText) === ranNum) {
+        allCells[i].classList.add("extracted");
+      }
+    }
+  } else {
+    pressBtn();
   }
 }
