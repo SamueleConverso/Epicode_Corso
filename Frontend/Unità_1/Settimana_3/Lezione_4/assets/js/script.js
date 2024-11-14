@@ -36,6 +36,7 @@ function pressBtn() {
 
   if (!check()) {
     extractedNum.push(ranNum);
+    console.lo;
     for (let i = 0; i < allCells.length; i++) {
       if (parseInt(allCells[i].innerText) === ranNum) {
         allCells[i].classList.add("extracted");
