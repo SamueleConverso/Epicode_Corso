@@ -85,7 +85,7 @@ section p {
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
@@ -241,7 +241,7 @@ footer a {
   left: 8px;
   bottom: -6px;
   opacity: 0.5;
-  width: 70%;
+  width: 400px;
 }
 
 #novitàDiv {
@@ -445,10 +445,10 @@ header {
     display: block;
     position: absolute;
     z-index: -1;
-    left: 500px;
+    left: 10px;
     bottom: -6px;
     opacity: 0.5;
-    width: 50%;
+    width: 500px;
   }
 }
 
