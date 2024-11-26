@@ -450,6 +450,10 @@ header {
     opacity: 0.5;
     width: 500px;
   }
+
+  body {
+    padding: 75px;
+  }
 }
 
 @media print {
