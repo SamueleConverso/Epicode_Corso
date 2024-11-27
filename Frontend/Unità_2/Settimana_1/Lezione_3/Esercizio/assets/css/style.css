@@ -1,0 +1,148 @@
+html,
+body {
+  margin: 0;
+  padding: 4px;
+  box-sizing: border-box;
+  color: #742305;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navDiv {
+  background-color: #fdf6e1;
+  border-radius: 34px;
+}
+
+#ulNav {
+  font-size: 22px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+
+#ulNav li {
+  margin: 10px;
+  background-color: #ffdf7e;
+  border-radius: 20px;
+  padding: 10px;
+  flex-basis: 40%;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-weight: bold;
+}
+#ulNav #shopLi {
+  font-size: 44px;
+  flex-basis: 80%;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border-radius: 30px;
+}
+#ulNav #shopLi img {
+  width: 18%;
+  vertical-align: middle;
+  margin-right: 40px;
+}
+
+#title {
+  text-align: center;
+}
+
+#cardsDiv {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+#card1,
+#card2,
+#card3,
+#card4,
+#card5 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fdf6e1;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#cardImg1,
+#cardImg2,
+#cardImg3,
+#cardImg4,
+#cardImg5 {
+  width: 100%;
+}
+
+#cardImg1 img,
+#cardImg2 img,
+#cardImg3 img,
+#cardImg4 img,
+#cardImg5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#cardText1 h4,
+#cardText1 p,
+#cardText2 h4,
+#cardText2 p,
+#cardText3 h4,
+#cardText3 p,
+#cardText4 h4,
+#cardText4 p,
+#cardText5 h4,
+#cardText5 p {
+  margin: 0;
+}
+
+#cardText1,
+#cardText2,
+#cardText3,
+#cardText4,
+#cardText5 {
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+#cardText1 p,
+#cardText2 p,
+#cardText3 p,
+#cardText4 p,
+#cardText5 p,
+#cardText1 h4,
+#cardText2 h4,
+#cardText3 h4,
+#cardText4 h4,
+#cardText5 h4 {
+  padding: 6px;
+}
+
+#btnDiv1,
+#btnDiv2,
+#btnDiv3,
+#btnDiv4,
+#btnDiv5 {
+  text-align: center;
+  background-color: #ffdf7e;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+#num1,
+#num2,
+#num3,
+#num4,
+#num5 {
+  float: right;
+  padding-right: 20px;
+}
