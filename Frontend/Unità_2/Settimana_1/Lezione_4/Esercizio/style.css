@@ -81,6 +81,7 @@ p {
     rgba(255, 216, 7, 1) 66%
   );
   box-shadow: 6px 8px 6px 6px rgba(0, 0, 0, 0.279);
+  transition: transform 0.3s ease;
 }
 
 #postIt2,
@@ -103,28 +104,28 @@ p {
 }
 
 #postIt1 {
-  rotate: -10deg;
+  transform: rotate(-10deg);
 }
 #postIt2 {
-  rotate: 10deg;
+  transform: rotate(10deg);
 }
 #postIt3 {
-  rotate: -10deg;
+  transform: rotate(-10deg);
 }
 #postIt4 {
-  rotate: 10deg;
+  transform: rotate(10deg);
 }
 #postIt5 {
-  rotate: -10deg;
+  transform: rotate(-10deg);
 }
 #postIt6 {
-  rotate: -10deg;
+  transform: rotate(-10deg);
 }
 #postIt7 {
-  rotate: -6deg;
+  transform: rotate(-6deg);
 }
 #postIt8 {
-  rotate: 6deg;
+  transform: rotate(6deg);
 }
 #postIt1:hover,
 #postIt2:hover,
@@ -134,8 +135,7 @@ p {
 #postIt6:hover,
 #postIt7:hover,
 #postIt8:hover {
-  rotate: 0deg;
-  transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2) rotate(0deg);
 }
 
 #frase {
