@@ -170,16 +170,24 @@ p {
 
 @keyframes changeWord {
   from {
+    opacity: 40%;
+    bottom: 0px;
+  }
+
+  20% {
     opacity: 100%;
     bottom: 1rem;
   }
 
-  20% {
+  30% {
+    opacity: 100%;
     bottom: 1rem;
   }
 
-  to {
+  40% {
     opacity: 0%;
+  }
+  to {
     bottom: -70px;
   }
 }
