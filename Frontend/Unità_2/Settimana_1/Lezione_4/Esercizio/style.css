@@ -101,3 +101,84 @@ p {
     rgb(255, 162, 250) 66%
   );
 }
+
+#postIt1 {
+  rotate: -10deg;
+}
+#postIt2 {
+  rotate: 10deg;
+}
+#postIt3 {
+  rotate: -10deg;
+}
+#postIt4 {
+  rotate: 10deg;
+}
+#postIt5 {
+  rotate: -10deg;
+}
+#postIt6 {
+  rotate: -10deg;
+}
+#postIt7 {
+  rotate: -6deg;
+}
+#postIt8 {
+  rotate: 6deg;
+}
+#postIt1:hover,
+#postIt2:hover,
+#postIt3:hover,
+#postIt4:hover,
+#postIt5:hover,
+#postIt6:hover,
+#postIt7:hover,
+#postIt8:hover {
+  rotate: 0deg;
+  transform: scale(1.2, 1.2);
+}
+
+#frase {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#testoAlternato {
+  font-family: "Bree Serif", serif;
+  position: relative;
+  width: 50%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.parole i {
+  opacity: 0%;
+  position: absolute;
+  animation: changeWord 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changeWord {
+  from {
+    opacity: 100%;
+    bottom: 1rem;
+  }
+
+  to {
+    opacity: 0%;
+    bottom: -40px;
+  }
+}
+
+#i2 {
+  animation-delay: 2s;
+}
+#i3 {
+  animation-delay: 4s;
+}
