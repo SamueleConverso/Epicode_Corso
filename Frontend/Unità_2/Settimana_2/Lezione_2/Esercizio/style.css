@@ -1,0 +1,23 @@
+.accordion {
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-border-width: 0;
+  --bs-accordion-border-radius: 0;
+  --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-btn-focus-box-shadow: transparent;
+  --bs-accordion-active-color: black;
+  --bs-accordion-color: black;
+  --bs-accordion-btn-color: black;
+}
+
+.accordion-button::after {
+  padding-right: 0px;
+}
+
+/*.accordion-button::after {
+  width: 0;
+}*/
+
+/*.accordion-button.collapsed::after {
+  width: 0;
+}*/

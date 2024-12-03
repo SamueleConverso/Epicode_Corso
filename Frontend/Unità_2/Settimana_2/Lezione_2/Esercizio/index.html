@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -79,77 +80,104 @@
       </div>
     </div>
 
-    <div class="container p-0"><p>Saldi</p></div>
-
-    <div class="container p-0">
-      <div class="row justify-content-between mb-5">
-        <div class="col-6" style="width: fit-content">
-          <div class="card shadow" style="width: 15rem">
-            <img
-              src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_1280.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-6" style="width: fit-content">
-          <div class="card shadow" style="width: 15rem">
-            <img
-              src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_1280.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-between">
-        <div class="col-6" style="width: fit-content">
-          <div class="card shadow" style="width: 15rem">
-            <img
-              src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_1280.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-6" style="width: fit-content">
-          <div class="card shadow" style="width: 15rem">
-            <img
-              src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_1280.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="container px-0 mt-5">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Saldi
+              <div class="col-11 text-end">
+                <p class="mb-0">Nascondi sezione</p>
+              </div>
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <div class="container p-0">
+                <div class="row justify-content-between mb-5">
+                  <div class="col-6" style="width: fit-content">
+                    <div class="card shadow" style="width: 13rem">
+                      <img
+                        src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_1280.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6" style="width: fit-content">
+                    <div class="card shadow" style="width: 13rem">
+                      <img
+                        src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_1280.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-between">
+                  <div class="col-6" style="width: fit-content">
+                    <div class="card shadow" style="width: 13rem">
+                      <img
+                        src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_1280.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6" style="width: fit-content">
+                    <div class="card shadow" style="width: 13rem">
+                      <img
+                        src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_1280.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
