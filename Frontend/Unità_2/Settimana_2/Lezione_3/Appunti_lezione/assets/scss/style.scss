@@ -1,0 +1,12 @@
+@use 'partials/title';
+@import 'mixins/mixin';
+
+$colore-primario: blue;
+
+h1 {
+    color: $colore-primario;
+}
+
+p {
+    @include primaryColor;
+}
