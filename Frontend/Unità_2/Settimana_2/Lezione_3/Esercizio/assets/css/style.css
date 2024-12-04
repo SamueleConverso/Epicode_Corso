@@ -99,5 +99,13 @@
     opacity: 1;
   }
 }
+@media screen and (max-width: 575px) {
+  #heroImg {
+    position: unset;
+  }
+  #heroImg img {
+    max-width: 300px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
