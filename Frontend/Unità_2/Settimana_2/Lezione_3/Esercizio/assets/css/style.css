@@ -1,0 +1,100 @@
+#header {
+  background-color: #640fc5;
+}
+#header .btnNav {
+  color: white;
+}
+
+#hero {
+  background-color: #640fc5;
+}
+#hero p {
+  color: white;
+}
+#hero .btn:nth-child(1) {
+  padding: 10px;
+  background-color: blue;
+}
+#hero .btn:nth-child(2) {
+  padding: 10px;
+  background-color: orange;
+}
+#hero .btn:nth-child(3) {
+  padding: 10px;
+  background-color: green;
+}
+
+#heroImg {
+  position: relative;
+  top: 75px;
+  opacity: 0;
+  transition-property: transform;
+  transition-property: opacity;
+  animation-name: imgAnim;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes imgAnim {
+  from {
+    transform: translate(0px, 175px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+#hero .btn {
+  position: relative;
+  transition-property: transform;
+  transition-property: opacity;
+  animation-name: btnAnim;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes btnAnim {
+  from {
+    transform: translate(0px, 75px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+#par {
+  position: relative;
+  transition-property: transform;
+  transition-property: opacity;
+  animation-name: heroTextAnim;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#title {
+  position: relative;
+  transition-property: transform;
+  transition-property: opacity;
+  animation-name: heroTextAnim;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes heroTextAnim {
+  from {
+    transform: translate(0px, -75px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
