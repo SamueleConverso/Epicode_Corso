@@ -16,6 +16,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -226,15 +230,19 @@
               <div class="card-body">
                 <h5
                   class="card-title overflow-hidden"
-                  style="max-height: 2.4em; min-height: 2.4em"
+                  style="max-height: 2.4em; min-height: 2.4em; margin: 0"
                 >
                   GraphQL: introduction to graphQL for beginners
                 </h5>
-                <div class="card-text d-flex flex-nowrap">
-                  <i data-feather="clock" style="max-width: 16px"></i>
-                  <p>2h 40m</p>
-                  <i data-feather="clock" style="max-width: 16px"></i>
-                  <p>Advance</p>
+                <div class="row card-text d-flex flex-nowrap">
+                  <div class="col-6 d-flex">
+                    <i data-feather="clock" style="max-width: 16px"></i>
+                    <p style="margin: 0">2h 40m</p>
+                  </div>
+                  <div class="col-6 d-flex justify-content-end">
+                    <i class="bi bi-reception-4" style="color: purple"></i>
+                    <p style="margin: 0">Advance</p>
+                  </div>
                 </div>
               </div>
               <div class="card-footer">
