@@ -2,7 +2,7 @@ html,
 body {
   font-family: "Inter", sans-serif !important;
   background-color: whitesmoke;
-  min-width: 470px;
+  min-width: 480px;
 }
 
 .hero1 {
@@ -12,4 +12,25 @@ body {
 
 .hero2 {
   background-color: white;
+}
+
+.bi-star-fill,
+.biStarText {
+  color: orange;
+}
+
+p.biStarText,
+p.biStarText2 {
+  margin: 0;
+}
+
+.cardImg {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.cardAuthor {
+  margin: 0;
+  align-self: center;
+  font-size: small;
 }
