@@ -1,0 +1,15 @@
+html,
+body {
+  font-family: "Inter", sans-serif !important;
+  background-color: whitesmoke;
+  min-width: 470px;
+}
+
+.hero1 {
+  background-color: #754ffe;
+  color: white;
+}
+
+.hero2 {
+  background-color: white;
+}
