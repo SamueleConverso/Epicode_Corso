@@ -59,8 +59,8 @@ btnAdd.addEventListener("click", (e) => {
   pets.push(newPet);
   owners.push(newPet.ownerName);
   let owner1 = newPet.ownerName;
-  console.log(pets);
-  console.log(owners);
+  //console.log(pets);
+  //console.log(owners);
   for (let i = 0; i < pets.length; i++) {
     const newLi = document.createElement("li");
     newLi.innerText = `Nome pet: ${pets[i].petName}. Nome proprietario: ${pets[i].ownerName}.`;
