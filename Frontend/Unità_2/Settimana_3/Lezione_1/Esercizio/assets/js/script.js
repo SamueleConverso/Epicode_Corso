@@ -50,7 +50,7 @@ class Pet {
 btnAdd.addEventListener("click", (e) => {
   e.preventDefault;
   list.innerHTML = "";
-  redP.innerText = "";
+  redP.style.visibility = "hidden";
   let newPetName = inputPet.value;
   let newOwnerName = inputOwner.value;
   let newSpecies = inputSpecies.value;
@@ -69,8 +69,10 @@ btnAdd.addEventListener("click", (e) => {
   for (let b = 0; b < owners.length - 1; b++) {
     let owner2 = owners[b];
     if (owner1 === owner2) {
+      redP.innerText = "";
       redP.innerText = `${owners[b]} ha anche un altro pet!`;
       redP.style.color = "red";
+      redP.style.visibility = "visible";
       break;
     }
   }
