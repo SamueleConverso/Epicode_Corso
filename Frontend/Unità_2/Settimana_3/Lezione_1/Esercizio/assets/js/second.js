@@ -1,6 +1,6 @@
 let petsStr = localStorage.getItem("storedPets");
 let petsObj = JSON.parse(petsStr);
-console.log(petsObj);
+
 const list2 = document.getElementById("list2");
 
 window.addEventListener("load", function () {
