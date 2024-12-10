@@ -77,3 +77,13 @@ btnAdd.addEventListener("click", (e) => {
     }
   }
 });
+
+//------------------------------------------
+
+const btnSecondPage = document.getElementById("btnSecondPage");
+
+btnSecondPage.addEventListener("click", function () {
+  let storePets = JSON.stringify(pets);
+  localStorage.setItem("storedPets", storePets);
+  window.location.href = "second.html";
+});
