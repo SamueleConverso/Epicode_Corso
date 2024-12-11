@@ -37,6 +37,7 @@ function printMovies() {
 const btnClose = document.querySelectorAll(".btn-close-white");
 let arrBtnClose = Array.from(btnClose);
 
+//const cards = document.querySelectorAll(".card");
 let arrCards = Array.from(cards);
 
 cards.forEach((card) => {
