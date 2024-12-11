@@ -37,8 +37,13 @@ function printMovies() {
 const btnClose = document.querySelectorAll(".btn-close-white");
 let arrBtnClose = Array.from(btnClose);
 
-arrBtnClose.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    console.log("Sono qui");
+let arrCards = Array.from(cards);
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", function () {
+    let btn = card.querySelector(".btn-close-white");
+    btn.addEventListener("click", function () {
+      card.style.display = "none";
+    });
   });
 });
