@@ -56,8 +56,9 @@ function printImage() {
 
         let btn = cards[i].querySelector(".btn-outline-secondary:last-of-type");
         btn.innerText = "Hide";
-        btn.classList.add(`${photos[i].id}`);
-        // btn.setAttribute("onclick", deleteCard());
+        let col = document.querySelector(`.col-md-4:nth-of-type(${i})`);
+        col.classList.add(`${photos[i].id}`);
+        btn.setAttribute("onclick", deleteCard());
     }
 
 }
@@ -69,5 +70,9 @@ function createUrl() {
         url = `https://api.pexels.com/v1/search?query=${query}&per_page=9`;
         return url;
     }
+
+}
+
+function deleteCard() {
 
 }
