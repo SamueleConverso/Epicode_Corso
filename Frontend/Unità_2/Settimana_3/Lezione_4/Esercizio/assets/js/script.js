@@ -53,12 +53,13 @@ function printImage() {
         let image = cards[i].querySelector(".card-img-top");
         //let image = document.querySelector(`${cards[i]} .card-img-top`);
         image.setAttribute("src", photos[i].src.original);
+        console.log(photos[i].id);
 
         let btn = cards[i].querySelector(".btn-outline-secondary:last-of-type");
         btn.innerText = "Hide";
-        let col = document.querySelector(`.col-md-4:nth-of-type(${i})`);
-        col.classList.add(`${photos[i].id}`);
-        btn.setAttribute("onclick", deleteCard());
+        // let col = document.querySelector(`.col-md-4:nth-of-type(${i})`);
+        // col.id = photos[i].id;
+        // btn.setAttribute("onclick", deleteCard());
     }
 
 }
@@ -73,6 +74,6 @@ function createUrl() {
 
 }
 
-function deleteCard() {
+// function deleteCard() {
 
-}
+// }
