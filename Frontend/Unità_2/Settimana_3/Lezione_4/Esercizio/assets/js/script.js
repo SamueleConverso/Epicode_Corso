@@ -59,7 +59,7 @@ function printImage() {
         btn.innerText = "Hide";
         // let col = document.querySelector(`.col-md-4:nth-of-type(${i})`);
         // col.id = photos[i].id;
-        // btn.setAttribute("onclick", deleteCard());
+        // btn.setAttribute("onClick", deleteCard());
     }
 
 }
