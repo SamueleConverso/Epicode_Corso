@@ -99,4 +99,7 @@ function deleteCard(newId) {
 btnSearch.addEventListener("click", (e) => {
   e.preventDefault();
   getPhotos(inputSearch.value);
+  allCols.forEach((col) => {
+    col.style.display = "block";
+  });
 });
