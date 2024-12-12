@@ -8,7 +8,8 @@ let url = "https://api.pexels.com/v1/search?query=mountain&per_page=9";
 let query;
 
 
-async function getPhotos() {
+async function getPhotos(newQuery) {
+    query = newQuery;
     try {
         let response = await fetch(
             createUrl(),
@@ -29,23 +30,25 @@ async function getPhotos() {
 
 //getPhotos();
 
-async function callGetPhotos(newQuery) {
-    query = newQuery;
-    try {
-        getPhotos();
-    } catch (error) {
-        console.log(error);
-    }
-}
+// async function callGetPhotos(newQuery) {
+//     query = newQuery;
+//     try {
+//         getPhotos();
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 btnLoad.addEventListener("click", (e) => {
     e.preventDefault();
-    callGetPhotos("mountain");
+    getPhotos("mountain");
+    //callGetPhotos("mountain");
 });
 
 btnLoad2.addEventListener("click", (e) => {
     e.preventDefault();
-    callGetPhotos("sunset");
+    getPhotos("sunset");
+    //callGetPhotos("sunset");
 });
 
 function printImage() {
