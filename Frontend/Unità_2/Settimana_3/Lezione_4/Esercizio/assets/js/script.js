@@ -76,6 +76,26 @@ function printImage() {
       e.preventDefault();
       deleteCard(col.id);
     });
+    image.addEventListener("click", (e) => {
+      e.preventDefault();
+      //window.location.href = photos[i].src.original;
+      //window.location.href = "second-page.html";
+      let secondPage = "second-page.html";
+
+      let newUrl = `${secondPage}?photoId=${photos[i].id}`;
+
+      window.location.href = newUrl;
+
+      //const url = new URL("second-page.html");
+      //const params1 = new URLSearchParams(url.search);
+
+      // let imgUrl = "https://api.pexels.com/v1/photos/";
+      // let imgId = String(photos[i].id);
+      // let newUrl = imgUrl + ":" + imgId;
+      // let url = new URL(newUrl);
+      // console.log(url);
+      // let searchParam = new URLSearchParams(url.search);
+    });
     console.log(cards[i]);
     console.log(col);
   }
