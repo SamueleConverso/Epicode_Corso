@@ -74,3 +74,48 @@ console.log(nuovoStudente.getStudente());
 console.log(nuovoStudente.somma(15));
 let nuovoUtente = new Utente("Aldo", "Bianchi", 30);
 console.log(nuovoUtente.getStudente());
+//Giorno 3
+class Phone {
+    numero;
+    constructor(_numero) {
+        this.numero = _numero;
+    }
+}
+class UtenteConNumeri {
+    nome;
+    cognome;
+    numeri;
+    constructor(_nome, _cognome, _numeri) {
+        this.nome = _nome;
+        this.cognome = _cognome;
+        this.numeri = _numeri;
+    }
+}
+let newUtenteConNumeri = new UtenteConNumeri("Mario", "Rossi", [45435435, 234234234, 234234234]);
+console.log(newUtenteConNumeri);
+class Discente {
+    studente;
+    eta;
+    tecnologia;
+    constructor(_studente, _eta, _tecnologia) {
+        this.studente = _studente;
+        this.eta = _eta;
+        this.tecnologia = _tecnologia;
+    }
+    get getStudente() {
+        return `${this.studente} di anni ${this.eta}`;
+    }
+    get getCorso() {
+        return ` sta frequentando il corso di ${this.tecnologia}`;
+    }
+    completo() {
+        return this.getStudente + this.getCorso;
+    }
+}
+let newDiscente = new Discente("Mario Rossi", 25, "TypeScript");
+console.log(newDiscente.completo());
+let user = [2, "ciao"];
+let arr = [true];
+user.pop();
+arr.push(false);
+console.log(user);

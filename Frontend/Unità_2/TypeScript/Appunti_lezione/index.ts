@@ -106,3 +106,78 @@ console.log(nuovoStudente.somma(15));
 
 let nuovoUtente = new Utente("Aldo", "Bianchi", 30);
 console.log(nuovoUtente.getStudente());
+
+//Giorno 3
+
+class Phone {
+  numero: number;
+  constructor(_numero: number) {
+    this.numero = _numero;
+  }
+}
+
+class UtenteConNumeri {
+  nome: string;
+  cognome: string;
+  numeri: Phone[];
+  constructor(_nome: string, _cognome: string, _numeri: any) {
+    this.nome = _nome;
+    this.cognome = _cognome;
+    this.numeri = _numeri;
+  }
+}
+
+let newUtenteConNumeri = new UtenteConNumeri(
+  "Mario",
+  "Rossi",
+  [45435435, 234234234, 234234234]
+);
+
+console.log(newUtenteConNumeri);
+
+interface Studenti {
+  studente: string;
+  eta: number;
+
+  get getStudente(): string;
+}
+
+interface Corsi {
+  tecnologia: string;
+
+  get getCorso(): string;
+}
+
+class Discente implements Studenti, Corsi {
+  studente: string;
+  eta: number;
+  tecnologia: string;
+
+  constructor(_studente: string, _eta: number, _tecnologia: string) {
+    this.studente = _studente;
+    this.eta = _eta;
+    this.tecnologia = _tecnologia;
+  }
+
+  get getStudente(): string {
+    return `${this.studente} di anni ${this.eta}`;
+  }
+
+  get getCorso(): string {
+    return ` sta frequentando il corso di ${this.tecnologia}`;
+  }
+
+  completo(): string {
+    return this.getStudente + this.getCorso;
+  }
+}
+
+let newDiscente = new Discente("Mario Rossi", 25, "TypeScript");
+
+console.log(newDiscente.completo());
+
+let user: [number, string] = [2, "ciao"];
+let arr: [boolean] = [true];
+user.pop();
+arr.push(false);
+console.log(user);
