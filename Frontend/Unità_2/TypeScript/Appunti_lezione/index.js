@@ -33,3 +33,44 @@ const person3 = {
     firstName: "Gian",
     lastName: "Rossi",
 };
+function myFunc() {
+    let a = 90;
+    let b = "ciao";
+    let c = a + b;
+    return c;
+}
+console.log(myFunc());
+//Giorno 2
+class Studente {
+    nome;
+    cognome;
+    constructor(_nome, _cognome) {
+        this.nome = _nome;
+        this.cognome = _cognome;
+    }
+    getStudente() {
+        return `${this.nome} ${this.cognome}`;
+    }
+    #numeroRandom() {
+        return Math.floor(Math.random() * 11);
+    }
+    somma(num1) {
+        return num1 + this.#numeroRandom();
+    }
+}
+class Utente extends Studente {
+    eta;
+    constructor(_nome, _cognome, _eta) {
+        super(_nome, _cognome);
+        this.eta = _eta;
+    }
+    getStudente() {
+        return `${this.nome} ${this.cognome} di anni ${this.eta}`;
+    }
+    static proprieta2 = 50;
+}
+let nuovoStudente = new Studente("Mario", "Rossi");
+console.log(nuovoStudente.getStudente());
+console.log(nuovoStudente.somma(15));
+let nuovoUtente = new Utente("Aldo", "Bianchi", 30);
+console.log(nuovoUtente.getStudente());
