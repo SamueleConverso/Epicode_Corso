@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <ButtonComponent btnName="Clickami!" />
+      <ButtonComponent btnName="CLICK" />
       <ImageComponent
         src="https://www.mediakey.tv/fileadmin/assets/2022/EPICODE.png"
         alt="..."
