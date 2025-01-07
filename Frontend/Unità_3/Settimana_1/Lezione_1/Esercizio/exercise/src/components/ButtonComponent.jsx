@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 function ButtonComponent(props) {
   return (
     <>
