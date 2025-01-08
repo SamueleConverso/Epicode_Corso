@@ -16,7 +16,11 @@ class AllTheBooks extends Component {
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{book.title}</Card.Title>
                   <Card.Text>{book.price}€</Card.Text>
-                  <Button variant="primary" className="mt-auto">
+                  <Button
+                    variant="primary"
+                    className="mt-auto mx-auto"
+                    style={{ width: "fit-content" }}
+                  >
                     Go somewhere
                   </Button>
                 </Card.Body>
