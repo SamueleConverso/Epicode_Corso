@@ -21,7 +21,7 @@ class AllTheBooks extends Component {
                     className="mt-auto mx-auto"
                     style={{ width: "fit-content" }}
                   >
-                    Go somewhere
+                    BUY
                   </Button>
                 </Card.Body>
               </Card>
