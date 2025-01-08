@@ -17,7 +17,7 @@ class AllTheBooks extends Component {
                   <Card.Title>{book.title}</Card.Title>
                   <Card.Text>{book.price}€</Card.Text>
                   <Button
-                    variant="primary"
+                    variant="warning"
                     className="mt-auto mx-auto"
                     style={{ width: "fit-content" }}
                   >
