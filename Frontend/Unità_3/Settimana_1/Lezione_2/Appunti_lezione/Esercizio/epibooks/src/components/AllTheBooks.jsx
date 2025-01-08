@@ -13,10 +13,12 @@ class AllTheBooks extends Component {
             return (
               <Card key={book.asin} style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={book.img} />
-                <Card.Body>
+                <Card.Body className="d-flex flex-column">
                   <Card.Title>{book.title}</Card.Title>
                   <Card.Text>{book.price}€</Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <Button variant="primary" className="mt-auto">
+                    Go somewhere
+                  </Button>
                 </Card.Body>
               </Card>
             );
