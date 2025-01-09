@@ -4,9 +4,6 @@ import SingleBook from "./SingleBook";
 //import books from "../data/fantasy.json";
 import { Container, Form } from "react-bootstrap";
 
-//let isClicked = false;
-//let filteredBooks = [];
-
 class BookList extends Component {
   state = {
     query: "",
@@ -53,5 +50,3 @@ class BookList extends Component {
 }
 
 export default BookList;
-
-//this.props.bookList.filter((filteredBook) => filteredBook.title.includes(this.state.query)).map((book) => {return <SingleBook key={book.asin} book={book} />;})
