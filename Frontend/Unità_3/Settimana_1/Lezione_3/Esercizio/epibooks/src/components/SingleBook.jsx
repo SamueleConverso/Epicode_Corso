@@ -7,10 +7,19 @@ class SingleBook extends Component {
   state = {
     selected: false,
   };
+
+  classToAdd() {
+    if (this.state.selected) {
+      return "border-danger border-5";
+    } else {
+      return "border-0";
+    }
+  }
+
   render() {
     return (
       <Card
-        className={this.state.selected ? "border-5 border-danger" : "border-0"}
+        className={this.classToAdd()}
         style={{ width: "18rem" }}
         onClick={() => {
           if (this.state.selected) {
