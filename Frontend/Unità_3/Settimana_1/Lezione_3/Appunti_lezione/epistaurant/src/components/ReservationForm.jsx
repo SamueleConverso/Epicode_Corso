@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
+const URL = "https://striveschool-api.herokuapp.com/api/reservation";
+
 class ReservationForm extends Component {
   state = {
     reservation: {
@@ -13,6 +15,28 @@ class ReservationForm extends Component {
     },
   };
 
+  handleSubmit(e) {
+    e.preventDefault();
+
+    fetch(URL, {
+      method: "POST",
+      body: JSON.stringify(this.state.reservation),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Prenotazione salvata!");
+        } else {
+          throw new Error("La chiamata non è andata a buon fine.");
+        }
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
+
   render() {
     return (
       <Container>
@@ -21,10 +45,11 @@ class ReservationForm extends Component {
             <div>
               <h2 className="text-center">Prenota un tavolo ora!</h2>
             </div>
-            <Form>
+            <Form onSubmit={this.handleSubmit}>
               <Form.Group className="mb-3">
                 <Form.Label>Il tuo nome</Form.Label>
                 <Form.Control
+                  required
                   value={this.state.reservation.name}
                   onChange={(e) => {
                     this.setState({
@@ -42,6 +67,7 @@ class ReservationForm extends Component {
               <Form.Group className="mb-3">
                 <Form.Label>Il tuo telefono</Form.Label>
                 <Form.Control
+                  required
                   value={this.state.reservation.phone}
                   onChange={(e) => {
                     this.setState({
@@ -83,6 +109,7 @@ class ReservationForm extends Component {
               <Form.Group className="mb-3">
                 <Form.Label>Per quando?</Form.Label>
                 <Form.Control
+                  required
                   value={this.state.reservation.dateTime}
                   onChange={(e) => {
                     this.setState({
