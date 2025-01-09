@@ -1,6 +1,7 @@
-import { Carousel, Container, Row, Col, ListGroup } from "react-bootstrap";
+import { Carousel, Container, Row, Col } from "react-bootstrap";
 import pastasciutte from "../data/menu.json";
 import { Component } from "react";
+import PastaComments from "./PastaComments";
 
 class HomeContent extends Component {
   state = {
@@ -36,17 +37,7 @@ class HomeContent extends Component {
             </Col>
           </Row>
 
-          <Row className="justify-content-center">
-            <Col xs={12} md={6}>
-              <ListGroup className="text-center">
-                {this.state.activePasta.comments.map((r) => {
-                  return (
-                    <ListGroup.Item key={r.id}>{r.comment}</ListGroup.Item>
-                  );
-                })}
-              </ListGroup>
-            </Col>
-          </Row>
+          <PastaComments pasta={this.state.activePasta} />
         </Container>
       </>
     );
