@@ -8,6 +8,7 @@ import Welcome from "./components/Welcome";
 import BookList from "./components/BookList";
 import MyFooter from "./components/MyFooter";
 import "bootstrap/dist/css/bootstrap.min.css";
+import books from "./data/fantasy.json";
 
 function App() {
   //  const [count, setCount] = useState(0);
@@ -17,7 +18,7 @@ function App() {
       <MyNav />
       <Welcome />
       {/* <AllTheBooks /> */}
-      <BookList />
+      <BookList bookList={books} />
       <MyFooter />
     </>
   );
