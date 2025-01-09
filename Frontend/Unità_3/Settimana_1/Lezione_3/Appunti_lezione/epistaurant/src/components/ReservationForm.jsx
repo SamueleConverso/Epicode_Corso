@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 
 const URL = "https://striveschool-api.herokuapp.com/api/reservation";
 
@@ -15,7 +15,7 @@ class ReservationForm extends Component {
     },
   };
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
 
     fetch(URL, {
@@ -28,6 +28,16 @@ class ReservationForm extends Component {
       .then((response) => {
         if (response.ok) {
           alert("Prenotazione salvata!");
+          this.setState({
+            reservation: {
+              name: "",
+              phone: "",
+              numberOfPeople: "1",
+              dateTime: "",
+              smoking: false,
+              specialRequests: "",
+            },
+          });
         } else {
           throw new Error("La chiamata non è andata a buon fine.");
         }
@@ -35,7 +45,7 @@ class ReservationForm extends Component {
       .catch((error) => {
         console.log("error", error);
       });
-  }
+  };
 
   render() {
     return (
@@ -63,6 +73,10 @@ class ReservationForm extends Component {
                   placeholder="Nome"
                 />
               </Form.Group>
+
+              {this.state.reservation.name !== "" && (
+                <Alert variant="success">Che bel nome!</Alert>
+              )}
 
               <Form.Group className="mb-3">
                 <Form.Label>Il tuo telefono</Form.Label>
