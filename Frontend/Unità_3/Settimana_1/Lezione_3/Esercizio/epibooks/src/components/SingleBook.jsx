@@ -9,7 +9,17 @@ class SingleBook extends Component {
   };
   render() {
     return (
-      <Card style={{ width: "18rem" }}>
+      <Card
+        className={this.state.selected ? "border-5 border-danger" : "border-0"}
+        style={{ width: "18rem" }}
+        onClick={() => {
+          if (this.state.selected) {
+            this.setState({ selected: false });
+          } else {
+            this.setState({ selected: true });
+          }
+        }}
+      >
         <Card.Img variant="top" src={this.props.book.img} />
         <Card.Body className="d-flex flex-column">
           <Card.Title>{this.props.book.title}</Card.Title>
