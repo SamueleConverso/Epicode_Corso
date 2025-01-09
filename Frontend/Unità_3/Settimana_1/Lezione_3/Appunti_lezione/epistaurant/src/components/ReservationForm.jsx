@@ -57,7 +57,18 @@ class ReservationForm extends Component {
 
               <Form.Group className="mb-3">
                 <Form.Label>In quanti siete?</Form.Label>
-                <Form.Select aria-label="Table size">
+                <Form.Select
+                  value={this.state.reservation.numberOfPeople}
+                  onChange={(e) => {
+                    this.setState({
+                      reservation: {
+                        ...this.state.reservation,
+                        numberOfPeople: e.target.value,
+                      },
+                    });
+                  }}
+                  aria-label="Table size"
+                >
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
