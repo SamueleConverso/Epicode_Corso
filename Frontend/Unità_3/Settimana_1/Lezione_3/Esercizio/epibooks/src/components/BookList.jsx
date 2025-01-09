@@ -39,7 +39,9 @@ class BookList extends Component {
               })
             : this.props.bookList
                 .filter((filteredBook) =>
-                  filteredBook.title.includes(this.state.query)
+                  filteredBook.title
+                    .toLowerCase()
+                    .includes(this.state.query.toLowerCase())
                 )
                 .map((book) => {
                   return <SingleBook key={book.asin} book={book} />;
