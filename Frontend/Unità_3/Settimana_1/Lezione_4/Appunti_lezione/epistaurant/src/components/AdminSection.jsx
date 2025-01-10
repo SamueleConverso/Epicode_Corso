@@ -1,11 +1,21 @@
 import { Component } from "react";
-import { Container, Row, Col, ListGroup } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  ListGroup,
+  Spinner,
+  Alert,
+} from "react-bootstrap";
 
 const URL = "https://striveschool-api.herokuapp.com/api/reservation";
 
 class AdminSection extends Component {
   state = {
     reservations: [],
+    isLoading: true,
+    isError: false,
+    errorMessage: "",
   };
 
   getReservationsThenCatch = () => {
@@ -28,17 +38,28 @@ class AdminSection extends Component {
   getReservationsAsyncAwait = async () => {
     try {
       let response = await fetch(URL);
+      console.log("RESPONSE", response.status);
       if (response.ok) {
         let data = await response.json();
         console.log("DATA", data);
         this.setState({
           reservations: data,
+          isLoading: false,
         });
       } else {
+        this.setState({
+          isLoading: false,
+          isError: true,
+          errorMessage: response.status,
+        });
         throw new Error("Errore nel recupero dati API.");
       }
     } catch (error) {
       console.log("ERRORE", error);
+      this.setState({
+        isLoading: false,
+        isError: true,
+      });
     }
   };
 
@@ -58,6 +79,18 @@ class AdminSection extends Component {
         </Row>
         <Row className="justify-content-center my-3">
           <Col xs={12} md={6}>
+            {this.state.isLoading && (
+              <div className="text-center">
+                <Spinner animation="border" variant="info" />
+              </div>
+            )}
+            {this.state.isError && (
+              <div className="text-center">
+                <Alert variant="danger">
+                  ❌ ERROR {this.state.errorMessage}
+                </Alert>
+              </div>
+            )}
             <ListGroup>
               {this.state.reservations.map((res) => {
                 return (
