@@ -42,6 +42,10 @@ class AdminSection extends Component {
     }
   };
 
+  componentDidMount() {
+    this.getReservationsAsyncAwait();
+  }
+
   render() {
     return (
       <Container>
