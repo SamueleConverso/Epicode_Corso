@@ -33,12 +33,6 @@ class MovieCard extends Component {
     }
   }
 
-  // componentDidUpdate(prevState) {
-  //   if (this.state.movieData !== prevState.movieData) {
-  //     this.getMovieData();
-  //   }
-  // }
-
   render() {
     return (
       <Card>
