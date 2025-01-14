@@ -1,25 +1,30 @@
+import { Component } from "react";
 import { Card } from "react-bootstrap";
 //import CommentArea from "./CommentArea";
 
-function SingleBook(props) {
+class SingleBook extends Component {
   // state = {
   //   selected: false,
   // }
 
-  return (
-    <>
-      <Card
-        onClick={() => props.changeState(props.book.asin)}
-        style={{ border: props.selected ? "3px solid red" : "none" }}
-      >
-        <Card.Img variant="top" src={props.book.img} />
-        <Card.Body>
-          <Card.Title style={{ color: "black" }}>{props.book.title}</Card.Title>
-        </Card.Body>
-      </Card>
-      {/* {this.props.selected && <CommentArea asin={this.props.book.asin} />} */}
-    </>
-  );
+  render() {
+    return (
+      <>
+        <Card
+          onClick={() => this.props.changeState(this.props.book.asin)}
+          style={{ border: this.props.selected ? "3px solid red" : "none" }}
+        >
+          <Card.Img variant="top" src={this.props.book.img} />
+          <Card.Body>
+            <Card.Title style={{ color: "black" }}>
+              {this.props.book.title}
+            </Card.Title>
+          </Card.Body>
+        </Card>
+        {/* {this.props.selected && <CommentArea asin={this.props.book.asin} />} */}
+      </>
+    );
+  }
 }
 
 export default SingleBook;
