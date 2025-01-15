@@ -7,6 +7,8 @@ import AdminSection from "./components/AdminSection";
 import ReservationForm from "./components/ReservationForm";
 import HomeContent from "./components/HomeContent";
 import NotFound from "./components/NotFound";
+import Menu from "./components/Menu";
+import PastaDetails from "./components/PastaDetails";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,7 +21,8 @@ function App() {
         <Route path="/" element={<HomeContent />} />
         <Route path="/admin" element={<AdminSection />} />
         <Route path="/prenota" element={<ReservationForm />} />
-
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/details/:pastaId" element={<PastaDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
