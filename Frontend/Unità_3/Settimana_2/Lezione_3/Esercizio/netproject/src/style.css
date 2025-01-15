@@ -1,0 +1,362 @@
+* {
+  color: white !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+header,
+.navbar,
+#imgLogo {
+  background-color: black !important;
+}
+
+#header2 h2 {
+  margin: 0;
+}
+
+#imgLogo {
+  width: 78px;
+}
+
+.form-select {
+  background-image: url("../public/assets/img/arrowDown.svg");
+  background-color: black;
+  width: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.241);
+  border-radius: unset;
+}
+
+.navAvatarImg {
+  width: 30px;
+}
+
+header p.pKids {
+  margin: 0;
+}
+
+.avatarArrow:hover {
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../public/assets/img/dropBtn.svg");
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.241);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.bi-text-left,
+.bi-border-all {
+  /* padding: 8px 10px; */
+  /* padding: 20px; */
+  font-size: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.241);
+}
+.bi-text-left {
+  margin-right: 24px;
+}
+
+.bi-text-left:hover,
+.bi-border-all:hover {
+  background-color: rgba(255, 255, 255, 0.241);
+  cursor: pointer;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.carousel-inner img {
+  transition: z-index;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease, z-index 0.3s;
+  opacity: 0.7;
+}
+
+.carousel-inner img:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  opacity: 1;
+  z-index: 3;
+}
+
+.footIcon {
+  font-size: 28px;
+}
+
+.serviceBtn a {
+  border: 1px solid rgba(255, 255, 255, 0.606);
+  padding: 10px;
+}
+
+.serviceBtn a:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.241);
+}
+
+.carousel-control-prev {
+  justify-content: flex-start;
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  z-index: 5;
+}
+
+.carousel-control-next {
+  justify-content: flex-end;
+  align-self: center;
+  width: fit-content;
+  height: fit-content;
+  z-index: 5;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.5 !important;
+  transition: opacity 0.3s !important;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus,
+.carousel-control-prev:active,
+.carousel-control-next:active {
+  opacity: 1 !important;
+}
+
+.carousel-control-prev:focus:not(:hover),
+.carousel-control-next:focus:not(:hover),
+.carousel-control-prev:active:not(:hover),
+.carousel-control-next:active:not(:hover) {
+  opacity: 0.5 !important;
+}
+
+hr {
+  border: 1px solid white;
+}
+
+.settingsAvatar {
+  width: 120px;
+}
+
+input {
+  width: 75%;
+  max-width: 300px;
+}
+
+#editBox p {
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  width: fit-content;
+  vertical-align: middle;
+}
+
+.serviceBtnSave a {
+  border: 1px solid rgba(255, 255, 255, 0.606);
+  padding: 10px;
+  background-color: white;
+  color: black !important;
+}
+
+.serviceBtnSave a:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.241);
+}
+
+input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.826);
+}
+/*
+#dropDiv {
+  position: relative;
+}
+
+#menuDrop {
+  position: absolute;
+  right: 5000px;
+}*/
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-toggle::before {
+  display: none !important;
+}
+
+.dropdown-toggle {
+  position: relative !important;
+}
+
+.dropdown-menu.show {
+  position: absolute !important;
+  left: -120px !important;
+  background-color: black !important;
+}
+/*
+#checkboxFirstPage {
+  vertical-align: middle;
+}
+
+.containerCheck1 {
+  position: relative;
+  padding: 0;
+}
+
+.containerCheck1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: black;
+  border: 2px solid white;
+}
+.containerCheck1:hover input ~ .checkmark {
+  background-color: black;
+}
+
+.containerCheck1 input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.containerCheck1 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.containerCheck1 .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+*/
+
+/* The container */
+.containerCheckBox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.241);
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheckBox:hover input ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.241);
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckBox input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheckBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckBox .checkmark:after {
+  left: 7px;
+  top: 5px;
+  width: 7px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#mainSettings a,
+#mainSettings p,
+#mainSettings h1,
+#mainSettings h2,
+#mainSettings h3,
+#mainSettings h4,
+#mainSettings h5,
+#mainSettings h6 {
+  color: black !important;
+}
+
+#mainSettings hr {
+  border: 1px solid black;
+}
+
+#mainSettings a {
+  color: #326b9a !important;
+}
