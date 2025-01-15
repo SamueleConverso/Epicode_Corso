@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import { Card } from "react-bootstrap";
+import { Card, ListGroup } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 function MovieDetails() {
@@ -8,8 +8,11 @@ function MovieDetails() {
   const apiKey = "57fb0e95";
 
   const URL = `http://www.omdbapi.com/?apikey=${apiKey}&i=${params.movieId}`;
+  const URL2 =
+    "https://striveschool-api.herokuapp.com/api/comments/" + params.movieId;
 
   const [movie, setMovie] = useState({});
+  const [comments, setComments] = useState([]);
 
   const getMovie = async () => {
     try {
@@ -31,8 +34,34 @@ function MovieDetails() {
     }
   };
 
+  const getComments = async () => {
+    try {
+      let response = await fetch(URL2, {
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzViZjcxMWQyMjA3MTAwMTVkZTJmM2MiLCJpYXQiOjE3MzY3NzU0OTIsImV4cCI6MTczNzk4NTA5Mn0.osQ2_e4s_GY6jCxZqAeauysgRNBkXeGKYLGPn7kHr9E",
+        },
+      });
+      if (response.ok) {
+        let data = await response.json();
+        setComments(data);
+        console.log(data);
+        // setMovies(data.Search);
+        // setIsLoading(false);
+        //console.log(this.state.movies);
+      } else {
+        throw new Error("ERRORE");
+      }
+    } catch (error) {
+      //   setIsLoading(false);
+      //   setIsError(true);
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     getMovie();
+    getComments();
   }, []);
 
   return (
@@ -48,6 +77,18 @@ function MovieDetails() {
           </Card.Body>
         </Card>
       </div>
+      <ListGroup className="mt-2">
+        {comments.map((comment) => {
+          return (
+            <ListGroup.Item
+              className="text-black text-center"
+              key={comment._id}
+            >
+              {comment.comment}
+            </ListGroup.Item>
+          );
+        })}
+      </ListGroup>
     </>
   );
 }
