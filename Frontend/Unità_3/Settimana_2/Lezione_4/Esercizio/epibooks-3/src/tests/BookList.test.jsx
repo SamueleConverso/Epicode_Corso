@@ -17,11 +17,11 @@ describe("Testing array", () => {
     render(<BookList books={books} />);
     // ho etichettato i miei ListGroup.Item con data-testid="list element"
     const arrayBefore = await screen.findAllByTestId("book element");
-    console.log("BEFORE", arrayBefore.length);
+    //console.log("BEFORE", arrayBefore.length);
     const filterInput = screen.getByPlaceholderText(/cerca un libro/i);
     fireEvent.change(filterInput, { target: { value: "k" } });
     const arrayAfter = await screen.findAllByTestId("book element");
-    console.log("AFTER", arrayAfter.length);
+    //console.log("AFTER", arrayAfter.length);
     expect(arrayAfter.length).toBeLessThan(arrayBefore.length);
   });
 });
