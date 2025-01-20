@@ -14,6 +14,16 @@ function jobReducer(state = initialState, action) {
           jobs: state.favourites.jobs.concat(action.payload),
         },
       };
+    case "REMOVE_FROM_FAVOURITES":
+      return {
+        ...state,
+        favourites: {
+          ...state.favourites,
+          jobs: state.favourites.jobs.filter((job) => {
+            return action.payload !== job;
+          }),
+        },
+      };
     default:
       return state;
   }
