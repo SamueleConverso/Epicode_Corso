@@ -51,30 +51,30 @@ const MainSearch = () => {
   return (
     <>
       <Container>
-        {!isError && (
-          <Row>
-            <Col xs={10} className="mx-auto my-3">
-              <h1 className="display-1">Remote Jobs Search</h1>
-              <Link to="/favourites">Favourites</Link>
-            </Col>
-            <Col xs={10} className="mx-auto">
-              <Form onSubmit={handleSubmit}>
-                <Form.Control
-                  type="search"
-                  value={query}
-                  onChange={handleChange}
-                  placeholder="type and press Enter"
-                />
-              </Form>
-              {isLoading && <Spinner animation="grow" className="mt-4" />}
-            </Col>
+        <Row>
+          <Col xs={10} className="mx-auto my-3">
+            <h1 className="display-1">Remote Jobs Search</h1>
+            <Link to="/favourites">Favourites</Link>
+          </Col>
+          <Col xs={10} className="mx-auto">
+            <Form onSubmit={handleSubmit}>
+              <Form.Control
+                type="search"
+                value={query}
+                onChange={handleChange}
+                placeholder="type and press Enter"
+              />
+            </Form>
+            {isLoading && <Spinner animation="grow" className="mt-4" />}
+          </Col>
+          {!isError && (
             <Col xs={10} className="mx-auto mb-5">
               {jobsArray.map((jobData) => (
                 <Job key={jobData._id} data={jobData} />
               ))}
             </Col>
-          </Row>
-        )}
+          )}
+        </Row>
         {isError && (
           <span className="text-danger">Errore nel recupero dati...</span>
         )}
