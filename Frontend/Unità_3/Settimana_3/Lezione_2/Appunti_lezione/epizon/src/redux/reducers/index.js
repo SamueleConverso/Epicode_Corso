@@ -4,6 +4,10 @@ const initialState = {
   cart: {
     content: [],
   },
+
+  user: {
+    name: "",
+  },
 };
 
 function mainReducer(state = initialState, action) {
@@ -30,6 +34,15 @@ function mainReducer(state = initialState, action) {
             // }
             return action.payload !== i;
           }),
+        },
+      };
+
+    case "SET_USER":
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          name: action.payload,
         },
       };
 
