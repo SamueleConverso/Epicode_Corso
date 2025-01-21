@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions";
+import { ADD_TO_CART, REMOVE_FROM_CART, SET_USER } from "../actions";
 
 const initialState = {
   cart: {
@@ -37,7 +37,7 @@ function mainReducer(state = initialState, action) {
         },
       };
 
-    case "SET_USER":
+    case SET_USER:
       return {
         ...state,
         user: {
