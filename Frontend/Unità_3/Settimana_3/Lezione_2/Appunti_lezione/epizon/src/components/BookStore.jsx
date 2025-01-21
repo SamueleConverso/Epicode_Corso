@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import BookList from "./BookList";
 import BookDetail from "./BookDetail";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getBooksAction } from "../redux/actions";
 
 const BookStore = () => {
@@ -11,6 +11,10 @@ const BookStore = () => {
   const [bookSelected, setBookSelected] = useState(null);
 
   const dispatch = useDispatch();
+
+  const booksArray = useSelector((state) => {
+    return state.book.stock;
+  });
 
   useEffect(() => {
     //getBooks();
@@ -41,7 +45,7 @@ const BookStore = () => {
         <BookList
           bookSelected={bookSelected}
           changeBook={changeBook}
-          books={[]}
+          books={booksArray}
         />
       </Col>
       <Col lg={8}>
