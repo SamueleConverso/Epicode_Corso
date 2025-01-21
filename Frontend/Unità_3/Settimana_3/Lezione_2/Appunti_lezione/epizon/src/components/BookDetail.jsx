@@ -1,7 +1,7 @@
 import { Col, Row, Button } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { ADD_TO_CART } from "../redux/actions";
+import { addToCartAction } from "../redux/actions";
 
 const BookDetail = ({ bookSelected }) => {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ const BookDetail = ({ bookSelected }) => {
               <Button
                 className="d-flex align-items-center"
                 onClick={() => {
-                  dispatch({ type: ADD_TO_CART, payload: bookSelected });
+                  dispatch(addToCartAction(bookSelected));
                 }}
               >
                 <span className="me-2">AGGIUNGI AL</span>
