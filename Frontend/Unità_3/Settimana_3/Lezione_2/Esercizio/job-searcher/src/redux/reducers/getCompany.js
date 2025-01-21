@@ -16,6 +16,7 @@ function getCompanyReducer(state = initialState, action) {
     case LOADING:
       return {
         ...state,
+        error: "",
         isLoading: action.payload,
       };
 
@@ -23,14 +24,14 @@ function getCompanyReducer(state = initialState, action) {
       return {
         ...state,
         company: action.payload,
-        isError: "",
+        error: "",
         isLoading: false,
       };
     case GET_COMPANY_ERROR:
       return { ...state, error: action.payload, isLoading: false };
 
     case GET_JOBS_SUCCESS:
-      return { ...state, jobs: action.payload, isError: "", isLoading: false };
+      return { ...state, jobs: action.payload, error: "", isLoading: false };
     case GET_JOBS_ERROR:
       return { ...state, error: action.payload, isLoading: false };
     default:
