@@ -3,6 +3,7 @@ import {
   GET_COMPANY_SUCCESS,
   GET_JOBS_ERROR,
   GET_JOBS_SUCCESS,
+  LOADING,
 } from "../reducers/getCompany";
 
 export const ADD_TO_FAVOURITE = "ADD_TO_FAVOURITE";
@@ -25,6 +26,7 @@ export const removeFromFavouritesAction = (job) => {
 export const getCompanyAction = (baseEndpoint, paramsCompany) => {
   return async (dispatch) => {
     try {
+      dispatch({ type: LOADING, payload: true });
       const response = await fetch(baseEndpoint + paramsCompany);
       if (response.ok) {
         const { data } = await response.json();
@@ -42,6 +44,7 @@ export const getCompanyAction = (baseEndpoint, paramsCompany) => {
 export const getJobsAction = (baseEndpoint, query) => {
   return async (dispatch) => {
     try {
+      dispatch({ type: LOADING, payload: true });
       const response = await fetch(baseEndpoint + query + "&limit=20");
       if (response.ok) {
         const { data } = await response.json();

@@ -1,3 +1,4 @@
+export const LOADING = "LOADING";
 export const GET_COMPANY_SUCCESS = "GET_COMPANY_SUCCESS";
 export const GET_COMPANY_ERROR = "GET_COMPANY_ERROR";
 export const GET_JOBS_SUCCESS = "GET_JOBS_SUCCESS";
@@ -7,19 +8,31 @@ const initialState = {
   jobs: [],
   company: [],
   error: "",
+  isLoading: false,
 };
 
 function getCompanyReducer(state = initialState, action) {
   switch (action.type) {
+    case LOADING:
+      return {
+        ...state,
+        isLoading: action.payload,
+      };
+
     case GET_COMPANY_SUCCESS:
-      return { ...state, company: action.payload };
+      return {
+        ...state,
+        company: action.payload,
+        isError: "",
+        isLoading: false,
+      };
     case GET_COMPANY_ERROR:
-      return { ...state, error: action.payload };
+      return { ...state, error: action.payload, isLoading: false };
 
     case GET_JOBS_SUCCESS:
-      return { ...state, jobs: action.payload };
+      return { ...state, jobs: action.payload, isError: "", isLoading: false };
     case GET_JOBS_ERROR:
-      return { ...state, error: action.payload };
+      return { ...state, error: action.payload, isLoading: false };
     default:
       return state;
   }

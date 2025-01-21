@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, Spinner } from "react-bootstrap";
 import Job from "./Job";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,6 +22,14 @@ const MainSearch = () => {
     return state.getCompany.jobs;
   });
 
+  const isError = useSelector((state) => {
+    return state.getCompany.error;
+  });
+
+  const isLoading = useSelector((state) => {
+    return state.getCompany.isLoading;
+  });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -41,29 +49,37 @@ const MainSearch = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col xs={10} className="mx-auto my-3">
-          <h1 className="display-1">Remote Jobs Search</h1>
-          <Link to="/favourites">Favourites</Link>
-        </Col>
-        <Col xs={10} className="mx-auto">
-          <Form onSubmit={handleSubmit}>
-            <Form.Control
-              type="search"
-              value={query}
-              onChange={handleChange}
-              placeholder="type and press Enter"
-            />
-          </Form>
-        </Col>
-        <Col xs={10} className="mx-auto mb-5">
-          {jobsArray.map((jobData) => (
-            <Job key={jobData._id} data={jobData} />
-          ))}
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <Container>
+        {!isError && (
+          <Row>
+            <Col xs={10} className="mx-auto my-3">
+              <h1 className="display-1">Remote Jobs Search</h1>
+              <Link to="/favourites">Favourites</Link>
+            </Col>
+            <Col xs={10} className="mx-auto">
+              <Form onSubmit={handleSubmit}>
+                <Form.Control
+                  type="search"
+                  value={query}
+                  onChange={handleChange}
+                  placeholder="type and press Enter"
+                />
+              </Form>
+              {isLoading && <Spinner animation="grow" className="mt-4" />}
+            </Col>
+            <Col xs={10} className="mx-auto mb-5">
+              {jobsArray.map((jobData) => (
+                <Job key={jobData._id} data={jobData} />
+              ))}
+            </Col>
+          </Row>
+        )}
+        {isError && (
+          <span className="text-danger">Errore nel recupero dati...</span>
+        )}
+      </Container>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 import Job from "./Job";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,6 +16,14 @@ const CompanySearchResults = () => {
 
   const company = useSelector((state) => {
     return state.getCompany.company;
+  });
+
+  const isError = useSelector((state) => {
+    return state.getCompany.error;
+  });
+
+  const isLoading = useSelector((state) => {
+    return state.getCompany.isLoading;
   });
 
   useEffect(() => {
@@ -43,6 +51,10 @@ const CompanySearchResults = () => {
       <Row>
         <Col className="my-3">
           <h1 className="display-4">Job posting for: {params.company}</h1>
+          {isError && (
+            <span className="text-danger">Errore nel recupero dati...</span>
+          )}
+          {isLoading && <Spinner animation="grow" className="mt-4" />}
           {company.map((jobData) => (
             <Job key={jobData._id} data={jobData} />
           ))}
