@@ -55,9 +55,8 @@ const CompanySearchResults = () => {
             <span className="text-danger">Errore nel recupero dati...</span>
           )}
           {isLoading && <Spinner animation="grow" className="mt-4" />}
-          {company.map((jobData) => (
-            <Job key={jobData._id} data={jobData} />
-          ))}
+          {!isError &&
+            company.map((jobData) => <Job key={jobData._id} data={jobData} />)}
         </Col>
       </Row>
     </Container>
