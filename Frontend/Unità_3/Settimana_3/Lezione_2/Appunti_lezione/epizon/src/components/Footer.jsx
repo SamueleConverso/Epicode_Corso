@@ -1,7 +1,14 @@
-const Footer = () => (
-  <footer className="epizon-footer">
-    <span className="text-muted">Epizon {new Date().getFullYear()}©</span>
-  </footer>
-)
+import { useSelector } from "react-redux";
 
-export default Footer
+const Footer = () => {
+  const booksArray = useSelector((state) => state.book.stock);
+  return (
+    <footer className="epizon-footer">
+      <span className="text-muted">
+        Epizon {new Date().getFullYear()}© - Abbiamo {booksArray.length} libri
+      </span>
+    </footer>
+  );
+};
+
+export default Footer;
