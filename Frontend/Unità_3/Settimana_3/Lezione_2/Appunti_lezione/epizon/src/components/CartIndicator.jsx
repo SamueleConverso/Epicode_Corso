@@ -13,6 +13,7 @@ const CartIndicator = () => {
   const name = useSelector((state) => {
     return state.user.name;
   });
+
   const dispatch = useDispatch();
 
   const [inputValue, setInputValue] = useState("");
