@@ -164,3 +164,14 @@ Sì.
 /*
 20) Crea un'interfaccia generica per una risposta API.  
 */
+interface Resp<A, B> {
+  nome: A;
+  cognome: A;
+  età: B;
+}
+
+let myResp: Resp<string, number> = {
+  nome: "Sam",
+  cognome: "Conv",
+  età: 26,
+};

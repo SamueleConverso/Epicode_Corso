@@ -76,14 +76,8 @@ let myAuto = {
     cilindrata: 999,
     porte: 5,
 };
-/*
-18) Cosa sono i Generics in TypeScript?
-Sono funzioni, classi o interfacce che hanno diversi tipi di dati. Possiamo anche specificarne il tipo quando le invochiamo.
-*/
-/*
-19) È possibile avere più tipi generici in un'interfaccia?
-Sì.
-*/
-/*
-20) Crea un'interfaccia generica per una risposta API.
-*/
+let myResp = {
+    nome: "Sam",
+    cognome: "Conv",
+    età: 26,
+};
