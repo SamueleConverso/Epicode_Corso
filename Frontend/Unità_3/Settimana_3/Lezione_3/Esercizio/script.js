@@ -39,32 +39,51 @@ function concStr(str1, str2) {
 }
 let myVar = 100;
 myVar = "CIAONE";
+let myVar2 = 10;
+let day;
+day = "Monday";
 /*
-8) Crea una variabile che possa contenere un numero, null o undefined.
-
-9) Crea un tipo per rappresentare i giorni della settimana usando union di stringhe letterali.
-
 10) Tipizza il seguente array di numeri nei due modi possibili:
-
-const numbers = [1, 2, 3]
-
+*/
+const numbers = [1, 2, 3];
+const numbers2 = [4, 5, 6];
+/*
 11) Crea una tupla per definire un array di 5 elementi, i primi 3 devono essere stringhe e gli ultimi due numeri.
-
-12) Qual è la differenza tra type e interface?
-
-13) Definisci un'interfaccia in TypeScript per un oggetto dotato di proprietà "firstname", "lastname", e "age".
-
-14) Crea un'interfaccia per un utente con email obbligatoria e telefono opzionale.
-
-15) Crea un array tipizzato di oggetti "Studente" con nome e voto.
-
-16) Crea un'interfaccia base "Veicolo" e estendila per creare "Auto".
-
+*/
+let tup = [
+    "Ciao",
+    "come",
+    "stai",
+    0,
+    1,
+];
+const studenti = [
+    {
+        nome: "Samuele",
+        voto: 10,
+    },
+    {
+        nome: "Gianny",
+        voto: 10,
+    },
+];
+/*
 17) Crea un oggetto che implementi l'interfaccia Auto.
-
+*/
+let myAuto = {
+    nome: "macchina",
+    ruote: 4,
+    cilindrata: 999,
+    porte: 5,
+};
+/*
 18) Cosa sono i Generics in TypeScript?
-
+Sono funzioni, classi o interfacce che hanno diversi tipi di dati. Possiamo anche specificarne il tipo quando le invochiamo.
+*/
+/*
 19) È possibile avere più tipi generici in un'interfaccia?
-
+Sì.
+*/
+/*
 20) Crea un'interfaccia generica per una risposta API.
 */
