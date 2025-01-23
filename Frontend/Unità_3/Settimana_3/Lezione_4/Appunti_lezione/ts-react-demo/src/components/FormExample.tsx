@@ -10,7 +10,7 @@ interface Reservation {
 }
 
 const initialReservation: Reservation = {
-  name: "Prova",
+  name: "",
   phone: "Prova",
   numberOfPeople: 1,
   dateTime: "2024-03-20T19:30:00.000Z",
@@ -37,6 +37,7 @@ function FormExample() {
         }
       );
       if (response.ok) {
+        console.log(reservation);
         alert("GRAZIE!");
         setReservation(initialReservation);
       } else {
