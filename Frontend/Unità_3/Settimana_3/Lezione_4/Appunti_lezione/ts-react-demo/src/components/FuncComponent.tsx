@@ -17,7 +17,7 @@ function FuncComponent(props: FuncComponentProps) {
   const [movieObject, setMovieObject] = useState<null | Movie>(null);
 
   useEffect(() => {
-    console.log("Mountin");
+    console.log("Mounting");
     setMovieObject({ title: "BATMAN", year: 1960, id: 4234324 });
   }, []);
 
