@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ResultElement } from "../types/Result";
 import SingleArticle from "./SingleArticle";
+import { Container, Row } from "react-bootstrap";
 
 function Homepage() {
   const [articles, setArticles] = useState<ResultElement[]>([]);
@@ -29,11 +30,14 @@ function Homepage() {
   return (
     <div>
       <h1 className="text-center">Benvenuto nell'app Spacenews!</h1>
-
-      {articles &&
-        articles.map((article) => {
-          return <SingleArticle key={article.id} article={article} />;
-        })}
+      <Container>
+        <Row>
+          {articles &&
+            articles.map((article) => {
+              return <SingleArticle key={article.id} article={article} />;
+            })}
+        </Row>
+      </Container>
     </div>
   );
 }
