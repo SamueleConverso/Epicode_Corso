@@ -1,8 +1,12 @@
 //import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Homepage from "./components/Homepage";
 function App() {
-  return <></>;
+  return (
+    <>
+      <Homepage />
+    </>
+  );
 }
 
 export default App;

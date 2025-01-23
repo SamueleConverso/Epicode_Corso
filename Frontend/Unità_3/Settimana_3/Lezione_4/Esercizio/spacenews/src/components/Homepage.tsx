@@ -1,5 +1,41 @@
+import { useEffect, useState } from "react";
+import { ResultElement } from "../types/Result";
+import SingleArticle from "./SingleArticle";
+
 function Homepage() {
-  return <></>;
+  const [articles, setArticles] = useState<ResultElement[]>([]);
+
+  const getArticles = async () => {
+    try {
+      const response = await fetch(
+        "https://api.spaceflightnewsapi.net/v4/articles"
+      );
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data.results);
+        setArticles(data.results);
+      } else {
+        throw new Error("ERRORE");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getArticles();
+  }, []);
+
+  return (
+    <div>
+      <h1 className="text-center">Benvenuto nell'app Spacenews!</h1>
+
+      {articles &&
+        articles.map((article) => {
+          return <SingleArticle key={article.id} article={article} />;
+        })}
+    </div>
+  );
 }
 
 export default Homepage;
